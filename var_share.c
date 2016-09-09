@@ -1,3 +1,5 @@
+/* Progarm to change value of shared variable by different threads */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
@@ -61,6 +63,6 @@ void *val_by_second_thread( void *ptr )
      int *intp;
      intp = (int *) ptr;
      *intp=20000;
-     printf(" value modified by first thread %d\n",*intp);
+     printf(" value modified by second thread %d\n",*intp);
 }
 
